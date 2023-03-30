@@ -1,4 +1,4 @@
-let choices = ["rock", "paper", "scissors"];
+let  choices = ["rock", "paper", "scissors"];
 
 
 function getComputerChoice() {
