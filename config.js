@@ -12,7 +12,7 @@ function getPlayerChoice() {
     let controlInput = true;
 
     while (controlInput) { // procurar forma de usar o playerInput como controle
-        if (playerInput !== "rock" && playerInput !== "paper" && playerInput !== "scissors") { // Aqui posso usar choices para comparar (funcoes arrays)
+        if (!choices.includes(playerInput)) {
             playerInput = prompt("Rock, Paper or Scissors?", "").toLowerCase();
         }
         else {
@@ -32,7 +32,7 @@ function playRound() {
     if (computerSelection == playerSelection) {
         return "It's a tie!";
     }
-    if (computerSelection === "rock" && playerSelection === "scissors") { // tirar elses
+    if (computerSelection === "rock" && playerSelection === "scissors") {
         computerScore++;
         return "You Lose! Rock beats Scissors";
     }
