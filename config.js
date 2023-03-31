@@ -8,17 +8,17 @@ function getComputerChoice() {
 
 
 function getPlayerChoice() {
-    let playerInput = prompt("Rock, Paper or Scissors?", "").toLowerCase();
-    let controlInput = true;
+    let playerInput;
 
-    while (controlInput) { // procurar forma de usar o playerInput como controle
-        if (!choices.includes(playerInput)) {
-            playerInput = prompt("Rock, Paper or Scissors?", "").toLowerCase();
+    while (!choices.includes(playerInput)) { 
+        
+        if (playerInput === null) {
+            break;
         }
-        else {
-            controlInput = false;
-        }
+   
+        playerInput = prompt("Rock, Paper or Scissors?", "").toLowerCase();
     }
+
     return playerInput;
 }
 
@@ -29,6 +29,7 @@ function playRound() {
     let computerSelection = getComputerChoice();
     let playerSelection = getPlayerChoice();
 
+    // incluir tratativa do cancel
     if (computerSelection == playerSelection) {
         return "It's a tie!";
     }
