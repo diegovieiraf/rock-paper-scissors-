@@ -10,12 +10,12 @@ function getComputerChoice() {
 function getPlayerChoice() {
     let playerInput;
 
-    while (!choices.includes(playerInput)) { 
-        
+    while (!choices.includes(playerInput)) {
+
         if (playerInput === null) {
             break;
         }
-   
+
         playerInput = prompt("Rock, Paper or Scissors?", "").toLowerCase();
     }
 
@@ -29,7 +29,6 @@ function playRound() {
     let computerSelection = getComputerChoice();
     let playerSelection = getPlayerChoice();
 
-    // incluir tratativa do cancel
     if (computerSelection == playerSelection) {
         return "It's a tie!";
     }
@@ -68,8 +67,11 @@ function game() {
         console.log("You Lose!");
 
     }
-    else {
+    else if (computerScore < userScore) {
         console.log("You are the winner!");
+    }
+    else {
+        console.log("Tie!");
     }
 }
 
