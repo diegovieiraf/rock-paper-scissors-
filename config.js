@@ -58,21 +58,23 @@ function playRound() {
     }
 }
 
-function game() {
-    for (let index = 5; index >= 1; index--) {
-        console.log(playRound());
-    }
+// console.log(playRound());
 
-    if (computerScore > userScore) {
-        console.log("You Lose!");
+// function game() {
+//     for (let index = 5; index >= 1; index--) {
+//         console.log(playRound());
+//     }
 
-    }
-    else if (computerScore < userScore) {
-        console.log("You are the winner!");
-    }
-    else {
-        console.log("Tie!");
-    }
-}
+//     if (computerScore > userScore) {
+//         console.log("You Lose!");
 
-game();
+//     }
+//     else if (computerScore < userScore) {
+//         console.log("You are the winner!");
+//     }
+//     else {
+//         console.log("Tie!");
+//     }
+// }
+
+// game();
