@@ -10,6 +10,8 @@ let computerScore = 0;
 let userScore = 0;
 let result;
 let playerSelection;
+const container = document.getElementById("container");
+const showResult = document.querySelector(".result");
 let playerInput = document.querySelectorAll("button");
 
 
@@ -17,7 +19,8 @@ playerInput.forEach((button) => {
     button.addEventListener('click', () => {
         playerSelection = button.innerText.toLowerCase();
         playRound(playerSelection);
-        console.log(result);
+        showResult.textContent = result;
+        container.appendChild(showResult);
     });
 });
 
@@ -53,8 +56,6 @@ function playRound(playerSelection) {
         return result = "You Win! Rock beats Scissors";
     }
 }
-
-console.log(playRound(playerSelection));
 
 // function game() {
 //     for (let index = 5; index >= 1; index--) {
