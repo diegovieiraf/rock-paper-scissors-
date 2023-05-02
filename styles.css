@@ -94,3 +94,41 @@ header p {
 .restart-button:hover {
     background-color: rgba(236, 61, 61, 0.878);
 }
+
+/* Styles for screens smaller than 768px wide */
+@media (max-width: 767px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    header p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #main-container {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    #buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    #buttons button {
+        width: 200px;
+        font-size: 14px;
+        margin: 10px 0;
+    }
+}
