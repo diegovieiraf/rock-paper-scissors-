@@ -13,7 +13,7 @@ restartButton.style.display = 'none';
 
 playerInput.forEach((button) => {
     button.addEventListener('click', () => {
-        playerSelection = button.innerText.toLowerCase();
+        playerSelection = button.id;
         playRound(playerSelection);
         game();
     });
