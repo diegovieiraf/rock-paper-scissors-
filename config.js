@@ -8,7 +8,7 @@ const showResult = document.querySelector(".result");
 const scoreboard = document.querySelector(".scoreboard");
 const restartButton = document.querySelector(".restart-button");
 
-scoreboard.textContent = "Satan: 0 x Player: 0";
+scoreboard.textContent = "Satan 0 x 0 Player";
 restartButton.style.display = 'none';
 
 playerInput.forEach((button) => {
@@ -61,19 +61,19 @@ function game() {
 
     if (computerScore < 5 && userScore < 5) {
         showResult.innerText = partialResult;
-        return scoreboard.textContent = `Satan: ${computerScore} x Player: ${userScore}`;
+        return scoreboard.textContent = `Satan ${computerScore} x ${userScore} Player`;
 
     }
     if (computerScore === 5 && userScore < 5) {
         restartButton.style.display = 'block';
         showResult.innerText = "";
-        return scoreboard.innerText = `${computerScore} x ${userScore}
-         You Lose! Your soul it's mine!`;
+        return scoreboard.innerText = `Satan ${computerScore} x ${userScore} Player 
+         You Lose! Your soul is mine!`;
     }
     if (userScore === 5 && computerScore < 5) {
         restartButton.style.display = 'block';
         showResult.innerText = "";
-        return scoreboard.innerText = `${computerScore} x ${userScore}
+        return scoreboard.innerText = `Satan ${computerScore} x ${userScore} Player
          You are the winner! I get you another time.`;
     }
 }
@@ -84,6 +84,6 @@ restartButton.addEventListener('click', () => {
     partialResult = null;
     playerSelection = null;
     showResult.innerText = "";
-    scoreboard.textContent = "Satan: 0 x Player: 0";
+    scoreboard.textContent = "Satan 0 x 0 Player";
     restartButton.style.display = "none";
 });
