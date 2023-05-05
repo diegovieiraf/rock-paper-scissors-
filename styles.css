@@ -14,7 +14,7 @@ body {
 header {
     background-color: #f2f2f2;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
 }
 
 header h1 {
@@ -24,7 +24,7 @@ header h1 {
 
 header p {
     font-size: 1.5rem;
-    line-height: 2rem;
+    line-height: 1rem;
 }
 
 /* Styles for the main container */
@@ -34,8 +34,8 @@ header p {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 20px auto;
-    padding: 50px 20px;
+    /* margin: 20px auto; */
+    padding: 50px 10px;
 }
 
 #buttons {
@@ -50,7 +50,7 @@ header p {
     align-items: center;
     background-color: rgb(63, 214, 220);
     padding: 5px;
-    margin: 10px;
+    margin: 30px 10px;
     cursor: pointer;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -71,13 +71,13 @@ img {
 }
 
 .result {
-    margin: 20px 0px;
-    font-size: 30px;
+    margin: 15px 0px;
+    font-size: 2rem;
 }
 
 .scoreboard {
-    margin: 20px 0px;
-    font-size: 2.5rem;
+    margin: 15px 0px;
+    font-size: 2rem;
 }
 
 .restart-button {
@@ -99,6 +99,15 @@ img {
 
 /* Styles for screens smaller than 768px wide */
 @media (max-width: 767px) {
+
+    header h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    #main-container {
+        padding: 30px 5px;
+    }
     
     #buttons button {
         width: 30%;
